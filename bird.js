@@ -8,9 +8,6 @@ let timeSinceLastJump = Number.POSITIVE_INFINITY;
 export function setupBird() {
   setTop(window.innerHeight / 2);
   read();
-
-  // document.removeEventListener("keydown", handleJump);
-  // document.addEventListener("keydown", handleJump);
 }
 
 async function read() {
@@ -40,6 +37,5 @@ function getTop() {
 }
 
 function handleJump(event) {
-  // if (event.code !== "Space") return;
   timeSinceLastJump = 0;
 }

@@ -12,7 +12,6 @@ document.addEventListener(
   () =>
     SerialHandler.init().then(() => {
       handleStart();
-      // while (true) console.log(await SerialHandler.read());
     }),
   { once: true }
 );
