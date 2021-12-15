@@ -9,10 +9,7 @@ import SerialHandler from "./serialHandler.js";
 
 document.addEventListener(
   "keypress",
-  () =>
-    SerialHandler.init().then(() => {
-      handleStart();
-    }),
+  () => SerialHandler.init().then(handleStart),
   { once: true }
 );
 const title = document.querySelector("[data-title]");

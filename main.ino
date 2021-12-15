@@ -10,12 +10,12 @@ void loop() {
   int distance = getDistance();
 
   // Only log distance if it is consistently less than n
+  // Prevent false triggers by checking twice
   if (distance < maxDist && distance > 0) {
-    delay(50);
-    distance = getDistance();
-    if (distance < maxDist) {
-    Serial.print(distance);
-      delay(50);  
+    delay(10);
+    if (getDistance() < maxDist) {
+    Serial.print(1);
+    delay(10);
     }
   }
 }
